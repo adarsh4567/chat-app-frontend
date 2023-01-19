@@ -40,7 +40,7 @@ const Login = () => {
       };
 
       const { data } = await axios.post(
-        `${process.env.BACKEND_URL}/api/user/login`,
+        `https://chat-backend-eqly.onrender.com/api/user/login`,
         { email, password },
         config
       );
