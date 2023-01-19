@@ -12,7 +12,7 @@ import io from 'socket.io-client'
 import Lottie from 'react-lottie'
 import animationData from '../animation/typing.json'
 
-const ENDPOINT = process.env.BACKEND_URL;
+const ENDPOINT = 'https://chat-app-frontend-rust.vercel.app';
 var socket,selectedChatCompare
 
 const SingleChat = ({fetchAgain,setFetchAgain}) => {
