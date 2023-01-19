@@ -26,7 +26,7 @@ const GroupChatModal = ({children}) => {
                       Authorization:`Bearer ${user.token}`,
                   },
               };
-              const {data}= await axios.get(`${process.env.BACKEND_URL}/api/user?search=${search}`,config);
+              const {data}= await axios.get(`https://chat-backend-eqly.onrender.com/api/user?search=${search}`,config);
               console.log(data);
               setLoading(false)
               setSearchResult(data);
@@ -62,7 +62,7 @@ const GroupChatModal = ({children}) => {
                 Authorization:`Bearer ${user.token}`,
             },
         };
-        const {data} = await axios.post(`${process.env.BACKEND_URL}/api/chat/group`,{
+        const {data} = await axios.post(`https://chat-backend-eqly.onrender.com/api/chat/group`,{
           name:groupChatName,
           users:JSON.stringify(selectedUsers.map((u)=>u._id)),
         },config)

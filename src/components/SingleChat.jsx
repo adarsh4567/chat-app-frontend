@@ -45,7 +45,7 @@ const SingleChat = ({fetchAgain,setFetchAgain}) => {
                 },
             }
             setLoading(true);
-            const {data} = await axios.get(`${process.env.BACKEND_URL}/api/message/${selectedChat._id}`,config)
+            const {data} = await axios.get(`https://chat-backend-eqly.onrender.com/api/message/${selectedChat._id}`,config)
             // console.log(messages);
             setMessages(data)
             setLoading(false);
@@ -75,7 +75,7 @@ const SingleChat = ({fetchAgain,setFetchAgain}) => {
                     },
                 }
                 setNewMessage("")
-                const {data} = await axios.post(`${process.env.BACKEND_URL}/api/message`,{
+                const {data} = await axios.post(`https://chat-backend-eqly.onrender.com/api/message`,{
                     content:newMessage,
                     chatId:selectedChat._id,
                 },config)
